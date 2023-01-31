@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizacion de Pedido | TuPizzaUCV</title>
+     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="finalizar pedido.css">
+    
+</head>
+<body>
+    <div class="login-box">
+    
+        <h2>Estamos Preparando su Pedido</h2>
+        <p> Rellene lo solicitado a continuacion</p>
+
+        <form action="Pedido finalizado.html" method="post">
+            <div class="form-group">
+                <label for="telefono">Nro.de telefono</label>
+                <i class="bx bx-phone"></i>
+                <input 
+                type="number"
+                id="nro.telefono"
+                placeholder="Tu Numero de telefono"
+                required
+                >
+            </div>
+            <div class="form-group">
+            <div class="dropdown1">
+                <label for="touche1"><span class="spane1"></span>Metodo de Pago</label>
+                <input type="checkbox" class="touche1" id="touche1" required>
+                <div class="slide1">
+                    <li>Pago Movil <input type="radio" name="metodo de pago" class="cbe" id="op"></li>
+                    <li>Efectivo <input type="radio" name="metodo de pago" class="cbe" id="op"></li>   
+                </div>
+            </div>
+            </div>
+            <input type="submit" value="Concretar Pedido">
+        </form>
+
+    </div>
+
+</body>
+</html>

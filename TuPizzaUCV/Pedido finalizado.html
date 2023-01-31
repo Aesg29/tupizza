@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | TuPizzaUCV</title>
+    <link rel="stylesheet" href="tupicsa_IS.css">
+    
+</head>
+<body>
+    <section class="main">
+        <header>
+            <a href="TuPizzaUCV_IS.html"><img src="../TuPizzaUCV/imagenes/logo tupizza.png" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="TuPizzaUCV_IS.html">Inicio</a></li>
+                <li><a href="menu_IS.html">Menu</a></li>
+                <li><a href="TuPizzaUCV.html">Cerrar Sesion</a></li>
+                <li><a href="contacto_IS.html">Contacto</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>Gracias por <br><span>Preferirnos.</span></h2>
+                <p> Tu pedido ya ha sido registrado en un momento le
+                    contactaremos para conocer la ubicacion para la entrega 
+                    del pedido.
+                </p>
+            </div>
+            <div class="slider">
+                <div class="slides active">
+                    <img src="../TuPizzaUCV/imagenes/delivery.png">
+                </div>
+                <div class="slides">
+                    <img src="../TuPizzaUCV/imagenes/pizza delivery.png">
+                </div>
+                <div class="slides">
+                    <img src="../TuPizzaUCV/imagenes/californiana.png">
+                </div>
+                <div class="slides">
+                    <img src="../TuPizzaUCV/imagenes/cheescake.png">
+                </div>
+                <div class="slides">
+                    <img src="../TuPizzaUCV/imagenes/pepsi.png" >
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="sci">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></ion-icon></a></li>
+            </ul>
+            <div class="prevNext">
+                <p>Siempre frescas</p>
+                <span class="prev"><ion-icon name="chevron-back-outline"></ion-icon></span>
+                <span class="next"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+            </div>
+        </div>
+
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script>
+        //toggle
+        const menutoggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        menutoggle.onclick = function(){
+        menutoggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+        }
+
+
+        //slider
+        const slides = document.querySelectorAll('.slides');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        i = 0;
+        function ActiveSlide(n){
+            for(slide of slides)
+            slide.classList.remove('active');
+            slides[n].classList.add('active');
+        }
+
+        //funcion para el boton de siguiente
+        next.addEventListener('click',function(){
+            if(i == slides.length - 1){
+                i = 0;
+                ActiveSlide(i);
+            }
+            else{
+                i++;
+                ActiveSlide(i);
+            }
+        })
+          //funcion para el boton de previo
+          prev.addEventListener('click',function(){
+            if(i == 0){
+                i = slides.length - 1;
+                ActiveSlide(i);
+            }
+            else{
+                i--;
+                ActiveSlide(i);
+            }
+        })
+
+    
+
+    </script>
+</body>
+</html>
